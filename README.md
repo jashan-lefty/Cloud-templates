@@ -4,3 +4,8 @@ For the EC2 instances hosting WordPress, we launch them in public subnets, confi
 Furthermore, we create a Launch Template for the ASG, specifying the AMI, instance type, key pair, and security group. The ASG is configured with scaling policies to maintain a minimum of 1 and a maximum of 3 instances, scaling out when CPU utilization exceeds 70% and scaling in when it falls below 25%. Instances launched by the ASG are deployed into private subnets.
 Finally, we orchestrate the infrastructure deployment using CloudFormation, splitting it into two templates: one for networking-related services and another for application infrastructure. Testing involves accessing the WordPress site via the ALB, checking ASG behavior, verifying S3 integration, and ensuring RDS Multi-AZ functionality.
 This project showcases a robust and scalable architecture for hosting WordPress applications on AWS, leveraging various AWS services and best practices in infrastructure management.
+
+![image](https://github.com/user-attachments/assets/5e17b006-3d13-45b6-9ad7-fd26294e4cbe)
+
+
+
